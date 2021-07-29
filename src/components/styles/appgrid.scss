@@ -1,0 +1,39 @@
+.app-grid {
+  width: 100%;
+  height: 84%;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carousel-cell img {
+  height: 100%;
+  width: 100%;
+}
+
+.main-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.app-page {
+  display: grid;
+  grid-template-columns: repeat(4, 10.23vh);
+  grid-template-rows: repeat(7, 12vh);
+  width: 100%;
+  height: 100%;
+}
+
+.flickity-page-dots,
+.flickity-button {
+  display: none;
+}

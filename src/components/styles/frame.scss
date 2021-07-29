@@ -1,0 +1,54 @@
+:root {
+    --display-height: 94.2vh;
+    --display-width: 44.8vh;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+@font-face {
+    font-family: 'SF-pro-Regular';
+    src: url(../fonts/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+    font-family: 'SF-pro-SemiBold';
+    src: url(../fonts/SF-Pro-Display-Semibold.otf);
+}
+
+.frame {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../img/iphoneframe.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    mask-image: url(../img/mask/mask.svg);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-image: url(../img/mask/mask.svg);
+    -webkit-mask-repeat: no-repeat;
+    background-image: url('../img/wallpaper.jpg');
+    background-size: cover;
+    position: relative;
+    top: -.01vh;
+    right: .12vh;
+    width: var(--display-width);
+    height: var(--display-height);
+    padding: 1.9vh 2vh 1.5vh 2vh;
+}

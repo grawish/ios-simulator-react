@@ -1,0 +1,28 @@
+.notification-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+  top: -2%;
+  height: 4%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.notification-boxes {
+  width: 9vh;
+  height: 70%;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-family: 'SF-pro-SemiBold', sans-serif;
+  font-size: 2vh;
+  padding: 0 .1vh 0 .1vh;
+}
+
+.notification-icon {
+  color: white;
+  height: 40%;
+}

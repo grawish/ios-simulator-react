@@ -1,0 +1,20 @@
+.app-display{
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  background: white;
+  transition: .5s ease;
+  border-radius: 5vmin;
+}
+.opened{
+  width: var(--display-width) !important;
+  height: var(--display-height) !important;
+  //height: 100;
+  //position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+
+}
