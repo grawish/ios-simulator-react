@@ -38,7 +38,7 @@ function AppGrid(props) {
                 {/*<div className="carousel-cell">*/}
                 {/*    <div className="app-page">*/}
                 {/*        <div>*/}
-                {/*            /!*<img src="img/icons/21.svg" alt=""/>*!/*/}
+                {/*            <img src="img/icons/21.svg" alt=""/>*/}
                 {/*        </div>*/}
                 {/*    </div>*/}
                 {/*</div>*/}

@@ -9,7 +9,7 @@ function HomeScreen(props) {
         <>
             <NotifBar/>
             <AppGrid setStatus={props.setStatus} setPosition={props.setPosition}/>
-            <Dock/>
+            <Dock setStatus={props.setStatus} setPosition={props.setPosition}/>
         </>
     );
 }
