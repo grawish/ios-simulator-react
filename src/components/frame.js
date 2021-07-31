@@ -13,7 +13,7 @@ function Frame(props) {
         <div className={'frame'}>
             <div className={'display'}>
                 <HomeScreen setStatus={setStatus} setPosition={setPosition}/>
-                {status ? <IosApp status={status} position={position}/> : ''}
+                {status ? <IosApp status={status} position={position} setStatus={setStatus}/> : ''}
 
             </div>
         </div>

@@ -6,6 +6,7 @@
   left: 0;
   object-fit: cover;
   object-position: center;
+  border-radius: 5vmin;
   transform: rotateY(180deg);
 }
 .open{
@@ -23,7 +24,7 @@
   height: 5vh;
   position: absolute;
   z-index: 100;
-  transition: 1s ease;
+  transition: .5s ease;
   background-size: cover;
   background-position: center;
 }
@@ -34,6 +35,8 @@
   height: 20%;
   bottom: 0;
   left: 0;
+  border-bottom-left-radius: 5vmin;
+  border-bottom-right-radius: 5vmin;
   background: rgba(0,0,0,0.3);
   backdrop-filter: blur(1vh);
   .mode-slider{
@@ -56,8 +59,8 @@
     }
 
     .shutter{
-      height: 10vh;
-      width: 10vh;
+      height: 8vh;
+      width: 8vh;
       border-radius: 100%;
       border: none;
       background-image: url("../img/shutter.svg");
@@ -84,5 +87,6 @@
   left: 0;
   background: rgba(0,0,0,0.3);
   backdrop-filter: blur(1vh);
-
+  border-top-left-radius: 5vmin;
+  border-top-right-radius: 5vmin;
 }

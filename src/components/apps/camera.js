@@ -19,7 +19,6 @@ function Camera(props) {
         const img = document.querySelector('.preview');
         animdiv.classList.add('no-open');
         animdiv.classList.remove('open');
-
         animdiv.style.left = img.offsetLeft+"px";
         animdiv.style.top = (img.offsetTop+img.parentNode.parentNode.offsetTop)+"px";
     }
