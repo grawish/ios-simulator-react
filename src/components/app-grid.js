@@ -25,7 +25,24 @@ function AppGrid(props) {
                                 (value, index, array) => {
                                     return (
                                         <div key={index}>
-                                            <img onClick={setPos} data-index={index+1} src={"img/icons/"+(index+1)+".svg"} alt=""/>
+                                            <img onClick={setPos} data-index={index+1} src={"./img/icons/"+(index+1)+".svg"} alt=""/>
+                                        </div>
+
+                                    )
+                                }
+                            )
+                        }
+
+                    </div>
+                </div>
+                <div className="carousel-cell">
+                    <div className="app-page">
+                        {
+                            [...Array(9)].map(
+                                (value, index, array) => {
+                                    return (
+                                        <div key={index}>
+                                            <img onClick={setPos} data-index={23+index+1} src={"./img/icons/"+(23+index+1)+".svg"} alt=""/>
                                         </div>
 
                                     )

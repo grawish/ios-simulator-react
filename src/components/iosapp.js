@@ -33,11 +33,13 @@ function IosApp(props) {
         // bar.addEventListener('mousedown', () => );
         bar.addEventListener('dragstart', dragStart);
         bar.addEventListener('drag', drag);
-        bar.addEventListener('dragend', mouseup);
+        bar.addEventListener('dragend', dragend);
+        // bar.addEventListener('touchstart', dragStart);
+        bar.addEventListener('touchmove', touch);
+        bar.addEventListener('touchend', touchend);
     }
     let dragStart = e =>{
         const img = document.createElement("img");
-        img.src = "http://kryogenix.org/images/hackergotchi-simpler.png";
         document.body.appendChild(img);
         img.style.width = "0.01vh";
         img.style.height = "0.01vh";
@@ -50,7 +52,8 @@ function IosApp(props) {
     let drag = (e) => {
         let displayHeight = document.querySelector('.display').offsetHeight;
         let displayOffset = document.querySelector('.display').offsetTop;
-        let percentage = ((e.clientY - displayOffset) * 100) / displayHeight;
+        let percentage = ((e.pageY - displayOffset) * 100) / displayHeight;
+        console.log(e);
         let app = document.querySelector('.app-display');
         // console.log(percentage);
         app.style.height = percentage + '%';
@@ -61,13 +64,52 @@ function IosApp(props) {
             app.classList.remove('opened');
             app.style.top = ((100 - percentage) / 2) + '%';
             app.style.left = ((100 - percentage) / 2) + '%';
-            console.log(100 - percentage);
+            // console.log(100 - percentage);
         }
     }
-    let mouseup = (e) => {
+    let dragend = (e) => {
         let displayHeight = document.querySelector('.display').offsetHeight;
         let displayOffset = document.querySelector('.display').offsetTop;
         let percentage = ((e.clientY - displayOffset) * 100) / displayHeight;
+        let app = document.querySelector('.app-display');
+        app.removeAttribute('style');
+        if (percentage > 0 && percentage < 100) {
+            if (percentage > 80) {
+                app.classList.add('opened');
+            }
+            if (percentage < 80) {
+                app.classList.remove('opened');
+                app.style.top = props.position.y + "px";
+                app.style.left = props.position.x + "px";
+                setTimeout(() => {
+                    app.style.display = "none";
+                    props.setStatus(0);
+                }, 500)
+            }
+        }
+    }
+    let touch = (e) => {
+        let displayHeight = document.querySelector('.display').offsetHeight;
+        let displayOffset = document.querySelector('.display').offsetTop;
+        let percentage = ((e.changedTouches[0].pageY - displayOffset) * 100) / displayHeight;
+        // console.log(e);
+        let app = document.querySelector('.app-display');
+        // console.log(percentage);
+        app.style.height = percentage + '%';
+        app.style.width = percentage + '%';
+        // app.style.top = app.
+        app.style.transition = '0s';
+        if (percentage > 50 && percentage < 100) {
+            app.classList.remove('opened');
+            app.style.top = ((100 - percentage) / 2) + '%';
+            app.style.left = ((100 - percentage) / 2) + '%';
+            // console.log(100 - percentage);
+        }
+    }
+    let touchend = (e) => {
+        let displayHeight = document.querySelector('.display').offsetHeight;
+        let displayOffset = document.querySelector('.display').offsetTop;
+        let percentage = ((e.changedTouches[0].pageY - displayOffset) * 100) / displayHeight;
         let app = document.querySelector('.app-display');
         app.removeAttribute('style');
         if (percentage > 0 && percentage < 100) {
