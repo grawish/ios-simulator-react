@@ -8,9 +8,7 @@ function Safari(props) {
 
             </div>
             <div className={'safari-main'}>
-                <iframe id={'safari'} src={'https://grawishh.tk'} title={'safari'}>
-
-                </iframe>
+                <iframe id={'safari'} src={'https://devsnest.in'} title={'safari'} />
             </div>
             <div className={'safari-footer'}>
                 <div>

@@ -18,13 +18,13 @@
   width: 100vw;
   position: absolute;
   z-index: 100;
-  background: aqua;
+  background: #3a3a3a;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .start-btn{
-  background: red;
+  background: #727272;
   border-radius: 10px;
   width: 20vw;
   height: 8vh;
